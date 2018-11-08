@@ -5,7 +5,8 @@ const UserSchema = Schema({
     email: {type: String, default: "untitled user email"},
     name: {type: String, default: "untitled user"},
     password: {type: String, default: "untitled user"},
-    token: {type: String }
+    token: {type: String },
+    basket: [{ type: Schema.Types.ObjectId, ref: "Product" }]
 }, { toJSON: { virtuals: true } });
 
 const User = mongoose.model('User', UserSchema);

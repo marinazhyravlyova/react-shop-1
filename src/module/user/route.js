@@ -41,7 +41,7 @@ router.post('/sign-in', async (req, res) => {
     }
 });
 
-router.post('/sign-out', (req, res) => {
+router.get('/sign-out', (req, res) => {
     const token = req.headers['Authorization'];
 
     UserModel.findOne({ token })
