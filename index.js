@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const productRoute = require('./src/module/product/route');
 const userRoute = require('./src/module/user/route');
 const basketRoute = require('./src/module/basket/route');
+const healthyFoodRoute = require('./src/module/healthy-food/route');
 const app = express();
 const port = 3000;
 
@@ -17,6 +18,7 @@ app.use((req, res, next) => {
 app.use('/product', productRoute);
 app.use('/user', userRoute);
 app.use('/basket', basketRoute);
+app.use('/healthyFood', healthyFoodRoute);
 
 mongoose
     .connect('mongodb://marina-admin:Iforgotthis!2@ds127961.mlab.com:27961/react-shop', {useNewUrlParser: true})

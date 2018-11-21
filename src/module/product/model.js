@@ -6,6 +6,10 @@ const ProductSchema = Schema({
     description: {type: String, default: "without description"},
     url: {type: String, default: ""},
     price: {type: Number, default: 1},
+    calories: {type: Number, default: 0},
+    protein: {type: Number, default: 0},
+    fat: {type: Number, default: 0},
+    carbohydrates: {type: Number, default: 0},
     comments: [{type: Schema.Types.ObjectId, ref: "Comment"}]
 }, { toJSON: { virtuals: true } });
 
